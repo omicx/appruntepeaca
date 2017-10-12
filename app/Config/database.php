@@ -73,7 +73,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 's3rd3v#.',
+		'password' => '',
 		'database' => 'app_runtpak2016',
 		'prefix' => '',
 		//'encoding' => 'utf8',

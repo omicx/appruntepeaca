@@ -333,9 +333,9 @@ public function actualizarpago_action($id = null ){
                    $this->Email->smtpOptions = array(
                                 'port'=>'465',
                                 'timeout'=>'60',
-                                'host' => 'ssl://hapi.hosting-mexico.net',#server smtp
-                                'username'=>'contacto@runtepeaca.com',#usuario
-                                'password'=>'contacto1232017');//password
+                                'host' => '',#server smtp
+                                'username'=>'',#usuario
+                                'password'=>'');//password
 
                 #Configurar m�todo de entrega
                 $this->Email->delivery = 'smtp';
