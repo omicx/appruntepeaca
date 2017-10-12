@@ -1,0 +1,161 @@
+body{
+	background: #fff;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8pt;
+}
+		
+table,td
+{
+	/*border: 1px solid #CCC;*/
+	border-collapse: collapse;
+  	font-size:11pt;
+}
+table
+{
+	border:none;
+	/*border:1px solid #CCC;*/
+}
+thead th,
+tbody th
+{
+	background: #eee;
+  	color: #666;  
+	padding: 5px 10px;
+  	border-left: 1px solid #CCC;
+}
+tbody th
+{
+  background: #fafafb;
+  border-top: 1px solid #CCC;
+  text-align: left;
+  font-weight: normal;
+}
+
+tbody tr td
+{
+	padding: 5px 5px;
+  color: #666;
+}
+tbody tr td span
+{
+  color:#333;
+  font-size:5pt;
+}
+
+
+caption
+{
+	text-align: left;
+	font-size: 9pt;
+	padding: 10px 0;
+	color: #666;
+}
+
+.page-break{
+/*    border-radius:0.5em;*/
+    color:#333;
+    margin: 1em auto;
+    /*padding: 1em 0;*/
+    vertical-align: top;
+	width:21.5cm;
+	height: 27.9cm;
+}
+
+#content_report{
+    background: white;
+    color:#333;
+    margin: 1em auto;    
+    vertical-align: top;
+	width:21.5cm;
+	height: auto;
+}
+
+.page-break{
+	background: white;
+    color:#333;    
+    vertical-align: top;
+	width:21.5cm;
+	height: auto;
+	/*border:1px solid gray;
+	border-radius:.5em;*/
+	page-break-after: always;
+}
+
+.page-break h2, .page-break h3{
+	margin-left:1em;
+}
+
+.contenedor{
+    background: white;
+    color:#333;
+    margin: 1em auto;
+    padding: 1em 0;
+    vertical-align: top;
+    width: 95%;
+}
+
+.contenedor article{
+	background-color:#d3d3d3;
+    display: inline-block;
+    margin:0 2%;
+    height:auto;
+    padding: 0.5em;
+    vertical-align: top;
+    width: 40%;
+}
+
+
+.boxprint{
+text-align:right;
+padding-right:20px;
+}
+
+
+.btPrint{
+	background-image:url("../../img/printersmall.png");
+}
+.btClose{
+	background-image:url("../../img/w-close.png");
+}
+.btMostrar{
+	background-image:url("../../img/box-ok.png");
+}
+
+.btPrint, .btClose, .btMostrar{
+	background-repeat:no-repeat;
+	background-position:right;
+	background-color:#b6b6b6;
+	width:70px;
+	height:30px;
+	padding-right:20px;
+	padding-left:4px;
+	padding-bottom:1px;
+	padding-top:4px;
+	text-align:left;
+	font-size:8pt;
+	color:#333;
+	border:1px solid gray;
+	border-radius:.5em;
+}
+
+.btPrint:hover, .btClose:hover, .btMostrar:hover{
+	background-repeat:no-repeat;
+	background-position:right;
+	background-color:#a8a8a8;;
+	width:70px;
+	height:30px;
+	padding-right:20px;
+	padding-left:4px;
+	padding-bottom:1px;
+	padding-top:4px;
+	text-align:left;
+	font-size:8pt;
+	color:#333;
+	border:1px solid gray;
+}
+
+
+ .fiil_box{
+ 	background-color: #ccc; 	
+ }
