@@ -73,8 +73,10 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '',
-		'database' => 'app_runtpak2016',
+		//'login' => 'runtepea_cake',
+		'password' => 's3rd3v#.',
+		//'database' => 'runtepea_ocotlan2018',
+		'database' => 'app_runtepeaca',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

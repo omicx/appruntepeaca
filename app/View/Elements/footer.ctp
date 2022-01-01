@@ -9,11 +9,8 @@
                       
                       
                       echo $this->Html->image('logos/cipres.png', array('style'=>'height:80px', 'alt' => 'Patrocinadores'));
-                      echo $this->Html->image('logos/escudo-runtepeaca.png', array('style'=>'height:80px', 'alt' => 'Patrocinadores'));
-                      echo $this->Html->image('logos/mas.png', array('style'=>'height:80px', 'alt' => 'Patrocinadores'));
                       echo $this->Html->image('logos/logo-todo-tepeaca.png', array('style'=>'height:80px', 'alt' => 'Patrocinadores'));
                       echo $this->Html->image('logos/mrnutrition.jpg', array('style'=>'height:80px', 'alt' => 'Mr. Nutrition'));
-                      echo $this->Html->image('logos/corporativo-marta.png', array('style'=>'height:80px', 'alt' => 'Corporativo Martha'));
                     ?>
                 </div>
         </div>

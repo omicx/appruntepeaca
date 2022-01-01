@@ -13,11 +13,37 @@
                 Dashboard</span>
             </a>
           </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+         
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Inscripciones">
+            <a class="nav-link" href="/" target="_blank" >
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Inscripciones</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Carreras">
+            <a class="nav-link" href="/carreras" >
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Carreras</span>
+            </a>
+          </li>
+
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categorias">
+            <a class="nav-link" href="/categorias" >
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Categorias</span>
+            </a>
+          </li>
+
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categorias">
             <a class="nav-link" href="/inscripciones/lista" target="_blank">
               <i class="fa fa-fw fa-area-chart"></i>
               <span class="nav-link-text">
-                Listas Cat.</span>
+                Listas x Categoria</span>
             </a>
           </li>
 

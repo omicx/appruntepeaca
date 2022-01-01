@@ -7,11 +7,9 @@
 
 <?php
 
-
-echo $this->Html->css(array( 'bootstrap.min','humanity/jquery-ui')); //Theme Jquery ui
 echo $this->Html->script(array('jquery-3.2.1.min.js','bootstrap.min.js','jquery-ui.min.js')); //Jquery Core
-
-          ?>
+echo $this->Html->css(array( 'bootstrap.min','humanity/jquery-ui')); //Theme Jquery ui
+?>
 
 
 <script type="text/javascript">

@@ -19,7 +19,7 @@ $num_participantes_cat = 0;
     endif;
   ?>
 <h3 style="text-align: center; color:red; text-transform: uppercase; font-size:14pt;">
-<?php echo "Carrera Sr Afligidos 10km";?>
+<?php echo $titulo_encabezado;?>
 </h3>
  <h2 style="text-align: center; text-transform: uppercase; font-size:13pt;">
      Categoria - "<?=$categorias[$key] ?>" <span style="font-size:9pt; color:red;"> Total <?php echo $num_participantes_cat;?></span>

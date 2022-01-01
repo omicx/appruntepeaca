@@ -13,16 +13,17 @@
 <div style="text-align:center; border-bottom:1px dotted gray;">
 
 <div style="text-align:center;height:auto; width:100%;"> 
-	<img src="<?=$server_url;?>/img/logo-header.png" alt="Run Tepeaca 2017" title="Run Tepeaca 2017" />
+	<img src="<?=$server_url;?>/img/logo-header.png" alt="Run Tepeaca 2018" title="Run Tepeaca 2017" />
 </div>
 
 <p style="padding-top:30px; padding-left:40px; font-size:9pt; text-align:justify;">
 <br/><br/><br/>
 
 Estimado  <strong><?= $participante ?></strong>, hemos recibido tu solicitud de registro como participante a la 
-<?=$carrera_title?>,<br/> 
-la cual se llevar&aacute; a cabo el próximo <?=$fecha_carrera?> en las instalaciones del Parque Recreativo de Santa Cruz Temilco, Tepeaca, Puebla. <br/>
-Te pedimos confirmes tu asistencia descargando tu hoja de exhoneración y presentandola el dia del evento.
+<strong><?=$carrera_title?></strong>,<br/> 
+la cual se llevar&aacute; a cabo el próximo <strong><?=$fecha_carrera?></strong> en el <?=$lugar_carrera?>.
+ <br/>
+Te pedimos confirmes tu asistencia descargando tu hoja de exhoneración y presentandola el dia del evento a partir de las 7:00 AM en el modulo de registro.
 </p>
 
 <strong>Descarga tu Hoja de Exhoneración en la liga</strong>

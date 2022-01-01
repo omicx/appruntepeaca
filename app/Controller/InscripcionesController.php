@@ -6,39 +6,42 @@ App::uses('AppController', 'Controller');
 
 class InscripcionesController extends AppController {
 
-    public $uses = array("Participante");
+    public $uses = array("Participante","Carrera","Categoria");
     public $helpers = array("QrCode","Session");
 
 
 
     public function beforeFilter(){
-        $carreras = array("10K"=>"10 kilometros");
+        $carreras = $this->Carrera->find("list",array("fields"=>array("id","carrera")));
 
-        $categorias = array(
-            "LF" => "LF - Libre Femenil 18-39",
-            "LV" => "LV - Libre Varonil 18-39",
-            "MF" => "MF - Master Femenil 40-49",
-            "MV" => "MV - Master Varonil 40-49",
-            "VV" => "VV - Veteranos Varonil 50 adelante");
+        $categorias = $this->Categoria->find("list",array("fields"=> array("id","categoria") ));
 
         $this->set("carreras",$carreras);
         $this->set("categorias",$categorias);
+
+        $this->set("titulo_encabezado", "1a. Carrera Trail 13km - Ayudanos a Ayudar");
+        $this->set("fecha_encabezado", "2 de Septiembre del 2018 - 8 AM");
+        
     }
 
 
     public function index() {
 
-        $carreras = array("10K"=>"10 kilometros");
+        $this->set("titulo_encabezado", "1a. Carrera Trail 13km - Ayudanos a Ayudar");
+        $this->set("fecha_encabezado", "2 de Septiembre del 2018 - 8 AM");
 
-        $categorias = array(
-            "LF" => "LF - Libre Femenil 18-39",
-            "LV" => "LV - Libre Varonil 18-39",
-            "MF" => "MF - Master Femenil 40-49",
-            "MV" => "MV - Master Varonil 40-49",
-            "VV" => "VV - Veteranos Varonil 50 adelante");
+        $carreras = $this->Carrera->find("list",array("fields"=>array("id","carrera")));
+
+        $categorias = $this->Categoria->find("list",array("fields"=> array("id","categoria") ));
 
         $this->set("carreras",$carreras);
         $this->set("categorias",$categorias);
+        
+
+        $genero = array("masculino"=>"Masculino", "femenino"=>"Femenino");
+        $this->set("genero_options" , $genero );
+
+        $this->set("carrera_id",1);
 
 
     }//function
@@ -61,10 +64,13 @@ class InscripcionesController extends AppController {
                     $last+=1;
 
                     $this->request->data['Participante']['numero_participante'] = $last;
-                    $this->request->data['Participante']['carrera_id'] = "10K";
+                    //$this->request->data['Participante']['numero_participante'] = $this->request->data['Participante']['telefono'];
+                    //$this->request->data['Participante']['carrera_id'] = "KIDS";
 
+                    //se puso estas lineas para validar la curp que no se repita
                     $curp_participante = $this->request->data['Participante']['curp'];
                     $curp_participante = strtoupper($curp_participante);
+                    $curp_participante = strtoupper($curp_participante)."-".$last;
                     $this->request->data['Participante']['curp'] = $curp_participante;
 
                     $curps = $this->Participante->find( "list", array("fields"=> array("curp","curp" ) ) );
@@ -96,7 +102,7 @@ class InscripcionesController extends AppController {
                                 $this->set("participante", $this->Participante->find( "first", array( "conditions"=>array("Participante.id"=>$lastId ) ) ) );
                                 #$this->render("carta");
                                 $this->redirect('/inscripciones/carta/'.$lastId);
-                                #$this->render("registro");
+                                #$this->redirect("/");
                         }else{
                                 echo "<br/>Ocurrio un error al enviar un correo de confirmaci&oacute;n a <strong>".$email_sent['dir_email']."</strong>";
                                 $this->render(false);
@@ -235,7 +241,7 @@ public function actualizarpago_action($id = null ){
 
 
     public function entregado($id = null ){
-        $this->layout = "ajax";
+        $this->layout = "backend";
         if (!$id) {
             throw new NotFoundException(__('Invalid record'));
         }
@@ -271,7 +277,7 @@ public function actualizarpago_action($id = null ){
     public function editdistance($id = null ){
         $this->layout = "backend";
 
-        $carreras = array("10K"=>"10 kilometros", "5k"=>"5 kilometros");
+        $carreras = array("KIDS"=>"Kids 7Enero2018");
 
         $this->set("carreras",$carreras);
 
@@ -323,30 +329,31 @@ public function actualizarpago_action($id = null ){
         // Set data for the "view" of the Email
         $this->set('activate_url', 'http://' . env('SERVER_NAME').'/inscripciones/carta/'.$lastId );
         $this->set('participante', $nombre);
-        $this->set('carrera_title', '1ra. Carrera 10km en Honor al Señor de los Afligidos, Santa Cruz Temilco 2017');
-        $this->set('fecha_carrera', '17 de Septiembre de 2017 a las 9:00 hrs');
+        $this->set('carrera_title', 'RUN TEPEACA :: 13km CARRERA TRAIL CON CAUSA');
+        $this->set('fecha_carrera', '2 de Septiembre de 2018 a las 8:00 hrs');
+        $this->set('lugar_carrera', 'Parque Tepeyacatl Tepeaca, Puebla');
 
-        $this->set('server_url', 'http://inscripciones.runtepeaca.com' );
+
+        $this->set('server_url', 'http://trail.runtepeaca.com' );
         #$this->set('server_url', 'http://app.runtepeaca' );
 
            /* Opciones SMTP*/
                    $this->Email->smtpOptions = array(
                                 'port'=>'465',
                                 'timeout'=>'60',
-                                'host' => '',#server smtp
-                                'username'=>'',#usuario
-                                'password'=>'');//password
+                                'host' => 'ssl://hapi.hosting-mexico.net',#server smtp
+                                'username'=>'contacto@runtepeaca.com',#usuario
+                                'password'=>'somosRunt3p3aca2018');//password
 
                 #Configurar m�todo de entrega
                 $this->Email->delivery = 'smtp';
                 $this->Email->to = trim($mail);
 
-                $this->Email->bcc = array("mas_contabilidad_jms@hotmail.com");
-                $this->Email->bcc = array("ofm.isc@gmail.com");
+                $this->Email->bcc = array("ofm.isc@gmail.com","erikamtz10@hotmail.com");
 
 
-            $this->Email->subject = 'Run Tepeaca :: 1ra Carrera 10km Sr. de los Afligidos 2017';
-            $this->Email->from = 'Club Run Tepeaca 2017 <contacto@runtepeaca.com>';
+            $this->Email->subject = 'RUN TEPEACA :: 13km CARRERA TRAIL CON CAUSA';
+            $this->Email->from = 'Club de Atletismo Run Tepeaca 2018 <contacto@runtepeaca.com>';
             $this->Email->layout = 'run';
             $this->Email->template = 'run_confirmnin';
             $this->Email->sendAs = 'html';   // you probably want to use both :)
@@ -433,21 +440,9 @@ public function actualizarpago_action($id = null ){
         #$this->layout = "print";
 
         $this->layout = "layout_lista";
-        $this->set("title_for_layout","Carrera 5K");
+        $this->set("title_for_layout","Carrera KIDS");
 
-         $carreras = array("5K"=>"5 kilometros");
-
-        $categorias = array(
-            "LF" => "LF - Libre Femenil 18-39",
-            "LV" => "LV - Libre Varonil 18-39",
-            "MF" => "MF - Master Femenil 40-49",
-            "MV" => "MV - Master Varonil 40-49",
-            "VF" => "VF - Veteranos Femenil 50 adelante",
-            "VV" => "VV - Veteranos Varonil 50 adelante");
-
-        $this->set("carreras",$carreras);
-        $this->set("categorias",$categorias);
-
+      
 
         $this->set( "participantes", $this->Participante->find( "all") );
 
@@ -458,17 +453,23 @@ public function actualizarpago_action($id = null ){
     public function listacategoriaprint( $carrera_id ="5K" ){
         $this->layout = "printer";
 
-        $this->set("title_for_layout","Carrera 5K");
+        $this->set("title_for_layout","Carrera KIDS");
 
-         $carreras = array("5K"=>"5 kilometros");
+        $carreras = array("KIDS"=>"Kids 7Enero2018");
 
         $categorias = array(
-            "LF" => "LF - Libre Femenil 18-39",
-            "LV" => "LV - Libre Varonil 18-39",
-            "MF" => "MF - Master Femenil 40-49",
-            "MV" => "MV - Master Varonil 40-49",
-            "VF" => "VF - Veteranos Femenil 50 adelante",
-            "VV" => "VV - Veteranos Varonil 50 adelante");
+            "12" => "12 años",
+            "11" => "11 años",
+            "10" => "10 años",
+            "9A" => "9 años",
+            "8A" => "8 años",
+            "2E" => "2 - 12 años Especial",
+            "7A" => "7 años",
+            "6A" => "6 años",
+            "5A" => "5 años",
+            "4A" => "4 años",
+            "3A" => "3 años",
+            "2A" => "2 años");
 
         $this->set("carreras",$carreras);
         $this->set("categorias",$categorias);
@@ -482,21 +483,27 @@ public function actualizarpago_action($id = null ){
 
 
 
-     public function listaultimos( $carrera_id ="5K" ){
+     public function listaultimos( $carrera_id ="KIDS" ){
         #$this->layout = "print";
 
         $this->layout = "layout_lista";
-        $this->set("title_for_layout","Carrera 5K");
+        $this->set("title_for_layout","Carrera KIDS");
 
-         $carreras = array("5K"=>"5 kilometros");
+        $carreras = array("KIDS"=>"Kids 7Enero2018");
 
         $categorias = array(
-            "LF" => "LF - Libre Femenil 18-39",
-            "LV" => "LV - Libre Varonil 18-39",
-            "MF" => "MF - Master Femenil 40-49",
-            "MV" => "MV - Master Varonil 40-49",
-            "VF" => "VF - Veteranos Femenil 50 adelante",
-            "VV" => "VV - Veteranos Varonil 50 adelante");
+            "12" => "12 años",
+            "11" => "11 años",
+            "10" => "10 años",
+            "9A" => "9 años",
+            "8A" => "8 años",
+            "2E" => "2 - 12 años Especial",
+            "7A" => "7 años",
+            "6A" => "6 años",
+            "5A" => "5 años",
+            "4A" => "4 años",
+            "3A" => "3 años",
+            "2A" => "2 años");
 
         $this->set("carreras",$carreras);
         $this->set("categorias",$categorias);

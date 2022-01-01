@@ -8,7 +8,7 @@
                     dateFormat: 'yy-mm-dd',
                     changeMonth: true,
                     changeYear: true,
-                    yearRange: '-70:+0',
+                    yearRange: '-13:+0',
                     onSelect: function(value, ui) {
                       var today = new Date().getTime(),
                       dob = new Date(value).getTime();
@@ -51,19 +51,26 @@
                   </div>
 
                   <div class="form-group">
-                    <?=$this->Form->input("curp", array("readonly"=>$readonly, "label"=>"CURP", "type"=>"text", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
+                    <?=$this->Form->input("curp", array("readonly"=>$readonly, "label"=>"CURP", "type"=>"hidden", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
                   </div>
 
                   <div class="form-group">
                   <div class="row">
                   <div class="col-md-4">
-                    <?=$this->Form->input("telefono", array("readonly"=>$readonly, "label"=>"Num. Teléfono", "type"=>"text", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
+                    <?php //$this->Form->input("telefono", array("readonly"=>$readonly, "label"=>"Num. Teléfono", "type"=>"hidden", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
+                  
+                    <?=$this->Form->input("numero_participante", array("readonly"=>$readonly, "label"=>"Num. Corredor", "type"=>"text", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
                   </div>
                   <div class="col-md-6">
                     <?=$this->Form->input("email", array("readonly"=>$readonly, "label"=>"Email", "type"=>"email", "placeholder"=>"","class"=>"form-control", "required"=>"required") );?>
                   </div>
                   </div>
                   </div>
+
+                    <div class="form-group">
+                    <?=$this->Form->input("categoria_carrera_id",array("readonly"=>$readonly,'label'=>'Categoria','class'=>'form-control', 'options'=>$categorias, 'empty' => 'Selecciona Categoria ..',"required"=>"required"));?>
+                  </div>
+
 
                   <div class="form-group">
                   <div class="row">
@@ -83,10 +90,7 @@
                     <?=$this->Form->input("lugar_procedencia", array("readonly"=>$readonly,"label"=>"Lugar de Procedencia","placeholder"=>"","class"=>"form-control","required"=>"required" ));?>
                   </div>
 
-                  <div class="form-group">
-                    <?=$this->Form->input("categoria_carrera_id",array("readonly"=>$readonly,'label'=>'Categoria','class'=>'form-control', 'options'=>$categorias, 'empty' => 'Selecciona Categoria ..',"required"=>"required"));?>
-                  </div>
-
+                
                   <div class="f1-buttons">
                     <button type="submit" class="btn btn-primary" style="text-align: center;">Actualizar Datos</button>
                   </div>

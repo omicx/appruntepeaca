@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  color: #999;
+  color: #ea0101;
 }
 
 strong {
@@ -28,7 +28,7 @@ p.infotext{
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  padding: 30px 0;
+  padding: 10px 0;
 
 }
 
@@ -37,7 +37,7 @@ p.infotext{
 }
 
 .page-head-image img {
-  border-radius: 50%;
+  
 }
 
 #form-trabalhe {

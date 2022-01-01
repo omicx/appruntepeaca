@@ -12080,3 +12080,2378 @@ Stack Trace:
 #1 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
 #2 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2018-01-03 00:06:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\www\app.runtpak2016\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3644): Model->setSource('participantes')
+#5 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 C:\www\app.runtpak2016\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 C:\www\app.runtpak2016\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Participante', 'fields')
+#8 C:\www\app.runtpak2016\app\View\Inscripciones\index.ctp(47): FormHelper->create('Participante', Array)
+#9 C:\www\app.runtpak2016\lib\Cake\View\View.php(961): include('C:\\www\\app.runt...')
+#10 C:\www\app.runtpak2016\lib\Cake\View\View.php(923): View->_evaluate('C:\\www\\app.runt...', Array)
+#11 C:\www\app.runtpak2016\lib\Cake\View\View.php(473): View->_render('C:\\www\\app.runt...')
+#12 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#15 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2018-01-03 00:06:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\www\app.runtpak2016\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3644): Model->setSource('participantes')
+#5 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 C:\www\app.runtpak2016\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 C:\www\app.runtpak2016\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Participante', 'fields')
+#8 C:\www\app.runtpak2016\app\View\Inscripciones\index.ctp(47): FormHelper->create('Participante', Array)
+#9 C:\www\app.runtpak2016\lib\Cake\View\View.php(961): include('C:\\www\\app.runt...')
+#10 C:\www\app.runtpak2016\lib\Cake\View\View.php(923): View->_evaluate('C:\\www\\app.runt...', Array)
+#11 C:\www\app.runtpak2016\lib\Cake\View\View.php(473): View->_render('C:\\www\\app.runt...')
+#12 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#15 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2018-01-03 00:29:09 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'carrera_id' at row 1
+Request URL: /inscripciones/registro
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ap...', Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ap...')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1928): DboSource->create(Object(AppModel), Array, Array)
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(98): Model->save(Array)
+#6 [internal function]: InscripcionesController->registro()
+#7 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(InscripcionesController), Array)
+#8 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#10 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-01-03 00:39:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:40:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:40:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:40:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:40:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 00:41:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 01:57:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 01:57:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 02:01:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-03 02:01:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-07 08:00:08 Error: [SocketException] Unable to find the socket transport "ssl" - did you forget to enable it when you configured PHP?
+Request URL: /inscripciones/registro
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Network\Email\SmtpTransport.php(154): CakeSocket->connect()
+#1 C:\www\app.runtpak2016\lib\Cake\Network\Email\SmtpTransport.php(95): SmtpTransport->_connect()
+#2 C:\www\app.runtpak2016\lib\Cake\Network\Email\CakeEmail.php(1161): SmtpTransport->send(Object(CakeEmail))
+#3 C:\www\app.runtpak2016\lib\Cake\Controller\Component\EmailComponent.php(345): CakeEmail->send(NULL)
+#4 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(367): EmailComponent->send()
+#5 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(101): InscripcionesController->__sendActivationEmail('ofm.isc@gmail.c...', 'Dana Nahomi Lop...', '67')
+#6 [internal function]: InscripcionesController->registro()
+#7 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(InscripcionesController), Array)
+#8 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#10 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-01-07 23:20:59 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\www\app.runtpak2016\app\Controller\CarrerasController.php, line 42]
+2018-01-07 23:21:00 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /carreras
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-07 23:21:18 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\www\app.runtpak2016\app\Controller\CarrerasController.php, line 42]
+2018-01-07 23:21:18 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /carreras
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-07 23:21:32 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\www\app.runtpak2016\app\Controller\CarrerasController.php, line 42]
+2018-01-07 23:21:32 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /carreras
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\www\\app.runt...', 42, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-07 23:22:21 Error: [MissingActionException] Action CarrerasController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CarrerasController',
+  'action' => 'add',
+)
+Request URL: /carreras/add
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CarrerasController), Object(CakeRequest))
+#2 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-07 23:22:42 Error: Fatal Error (1): Call to a member function validates() on null in [C:\www\app.runtpak2016\app\Controller\CarrerasController.php, line 24]
+2018-01-07 23:22:42 Error: [FatalErrorException] Call to a member function validates() on null
+Request URL: /carreras/add
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\www\\app.runt...', 24, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-07 23:39:25 Error: [MissingViewException] View file "Categorias\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\index.ctp',
+)
+Request URL: /categorias
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-01-07 23:39:46 Error: [MissingViewException] View file "Categorias\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\index.ctp',
+)
+Request URL: /categorias
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-01-07 23:40:31 Error: [MissingViewException] View file "Categorias\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\index.ctp',
+)
+Request URL: /categorias
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-01-07 23:43:36 Error: [PDOException] SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'LF' for column 'id' at row 1
+Request URL: /categorias/add
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ap...', Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ap...')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1928): DboSource->create(Object(AppModel), Array, Array)
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\www\app.runtpak2016\app\Controller\CategoriasController.php(37): Model->save(Array)
+#6 [internal function]: CategoriasController->add()
+#7 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#8 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#10 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-01-07 23:44:43 Error: [MissingActionException] Action CategoriasController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriasController',
+  'action' => 'edit',
+)
+Request URL: /categorias/edit/LF
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#2 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-08 12:41:11 Error: Fatal Error (1): Call to a member function find() on null in [C:\www\app.runtpak2016\app\Controller\InscripcionesController.php, line 15]
+2018-01-08 12:41:11 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 15, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\www\\app.runt...', 15, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-08 14:04:57 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\www\app.runtpak2016\app\Controller\InscripcionesController.php, line 29]
+2018-01-08 14:04:57 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\www\\app.runt...', 29, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\www\\app.runt...', 29, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-08 15:03:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:03:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:04:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:04:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:06:02 Error: Fatal Error (1): Call to a member function set() on null in [C:\www\app.runtpak2016\app\Controller\InscripcionesController.php, line 29]
+2018-01-08 15:06:02 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 29)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 29, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\www\\app.runt...', 29, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-08 15:06:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:06:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:06:58 Error: Fatal Error (1): Call to a member function set() on null in [C:\www\app.runtpak2016\app\Controller\InscripcionesController.php, line 30]
+2018-01-08 15:06:59 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 30, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\www\\app.runt...', 30, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-08 15:06:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:06:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:07:43 Error: Fatal Error (1): Call to a member function set() on null in [C:\www\app.runtpak2016\app\Controller\InscripcionesController.php, line 30]
+2018-01-08 15:07:43 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\www\\app.runt...', 30, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\www\\app.runt...', 30, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-01-08 15:07:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:07:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:07:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:07:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:09:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:09:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:13:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:14:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:14:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:14:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:14:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:21:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:21:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:22:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:22:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:23:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:23:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:24:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:24:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:25:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:25:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:33:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:33:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:33:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:33:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:36:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:36:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:38:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:38:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:43:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:43:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:58:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 15:58:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:11:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:11:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:12:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:12:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:13:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:13:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:14:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-08 16:14:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:16:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'runtepea_cake\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\www\app.runtpak2016\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3644): Model->setSource('carreras')
+#5 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(2994): Model->_readDataSource('list', Array)
+#7 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(15): Model->find('list', Array)
+#8 [internal function]: InscripcionesController->beforeFilter(Object(CakeEvent))
+#9 C:\www\app.runtpak2016\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#11 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#12 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#13 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-01-09 11:16:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:16:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:18:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:18:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:47:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:47:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:52:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:52:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:54:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:54:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:54:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 11:54:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 12:07:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 12:07:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:30:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:30:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:31:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:31:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:31:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:31:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:32:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:32:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:33:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:33:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:33:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:33:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:34:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:34:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:34:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:35:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:35:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:35:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:35:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:35:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:37:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-09 16:37:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-14 08:38:50 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'categoria_carrera_id' doesn't have a default value
+Request URL: /inscripciones/registro
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ap...', Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ap...')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1928): DboSource->create(Object(AppModel), Array, Array)
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(87): Model->save(Array)
+#6 [internal function]: InscripcionesController->registro()
+#7 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(InscripcionesController), Array)
+#8 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#10 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-09 22:46:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'app_runenero2018\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\www\app.runtpak2016\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3644): Model->setSource('carreras')
+#5 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 C:\www\app.runtpak2016\lib\Cake\Model\Model.php(2994): Model->_readDataSource('list', Array)
+#7 C:\www\app.runtpak2016\app\Controller\InscripcionesController.php(15): Model->find('list', Array)
+#8 [internal function]: InscripcionesController->beforeFilter(Object(CakeEvent))
+#9 C:\www\app.runtpak2016\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 C:\www\app.runtpak2016\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#11 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#12 C:\www\app.runtpak2016\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InscripcionesController), Object(CakeRequest))
+#13 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-09 22:53:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:53:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:54:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:54:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:54:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:54:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:56:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-09 22:56:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:50:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:50:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:52:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:53:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-11 23:53:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:45:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:46:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:47:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:48:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:39 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:49:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:55:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/popper.min.js.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 17:55:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap.min.css.map
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-09-02 01:10:24 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\www\app.runtpak2016\lib\Cake\View\Helper\SessionHelper.php, line 19]
+2018-09-02 01:10:25 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /inscripciones/panel
+Stack Trace:
+#0 C:\www\app.runtpak2016\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\www\\app.runt...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\www\\app.runt...', 19, Array)
+#2 C:\www\app.runtpak2016\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\\www\\app.runt...', 19, Array)
+#3 C:\www\app.runtpak2016\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-02 01:29:26 Error: [MissingControllerException] Controller class InscipcionesController could not be found.
+Exception Attributes: array (
+  'class' => 'InscipcionesController',
+  'plugin' => NULL,
+)
+Request URL: /inscipciones/panel
+Stack Trace:
+#0 C:\www\app.runtpak2016\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-08-12 17:04:54 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:04:55 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:05:01 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:05:01 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:13:12 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:13:12 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:12 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:12 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:13 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:13 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:14 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:14 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:14 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:14 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:15 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:15 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:15 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:15 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:15 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:15 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:16 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:16 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:16 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:16 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:16 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:16 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:16 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:16 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:17 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:17 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:17 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:17 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:17 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:17 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:27 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:27 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:28 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:28 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:50 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:50 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:51 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:51 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:51 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:51 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:51 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:51 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:51 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:51 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:52 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:52 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:52 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:52 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:52 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:52 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:52 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:52 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:53 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:53 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:14:53 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:14:53 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:10 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:10 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:10 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:10 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:11 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:11 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:11 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:11 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:11 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:11 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:11 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:11 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:11 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:11 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:56 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:56 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:56 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:56 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:56 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:56 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:57 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:57 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:57 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:57 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:57 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:57 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-12 17:16:57 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-12 17:16:57 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-08-13 01:40:45 Error: Fatal Error (64): Cannot use 'String' as class name as it is reserved in [C:\www\app.runtepeaca\lib\Cake\Utility\String.php, line 24]
+2019-08-13 01:40:45 Error: [FatalErrorException] Cannot use 'String' as class name as it is reserved
+Stack Trace:
+#0 C:\www\app.runtepeaca\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24)
+#1 C:\www\app.runtepeaca\lib\Cake\Core\App.php(933): ErrorHandler::handleError(64, 'Cannot use 'Str...', 'C:\\www\\app.runt...', 24, Array)
+#2 C:\www\app.runtepeaca\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}

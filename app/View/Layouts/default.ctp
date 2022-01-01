@@ -19,8 +19,9 @@ $Description = __d('runtepeaca', 'Run Tepeaca: Run Tepeaca club deportivo de Tep
 	<?php
 		
 		echo $this->Html->meta('icon');
-        echo $this->Html->css(array('bootstrap.min','jquery-ui.min','style'));
         echo $this->Html->script(array('jquery-3.2.1.min.js','popper.min.js','bootstrap.min.js','jquery-ui.min.js'));
+        echo $this->Html->css(array('bootstrap.min','jquery-ui.min','style'));
+        
         
         echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -34,7 +35,6 @@ $Description = __d('runtepeaca', 'Run Tepeaca: Run Tepeaca club deportivo de Tep
      
      
 <div id="wrapper" class="container">
-  
   <?php echo $this->fetch('content'); ?>
 
 </div>

@@ -140,7 +140,7 @@ function entregarkit(id){
                       $entregados++;
                   }
 
-                  if( $row['Participante']['carrera_id']=="5k" ){//entregados
+                  if( $row['Participante']['carrera_id']=="1" ){//entregados
                       $carrera5k++;
                   }
 
@@ -162,12 +162,10 @@ function entregarkit(id){
             <i class="fa fa-table"></i>
             5k <strong><?php echo $carrera5k; ?></strong>
 
-            <i class="fa fa-table"></i>
-            10k <strong><?php echo $carrera10k; ?></strong>
-
+            
           </div>
           <div class="card-body">
-            <div class="">
+            <div class="table-responsive">
               <table class="table table-sm table-inverse tablarows" id="dataTable" cellspacing="0">
                 <thead>
                   <tr>
@@ -219,7 +217,7 @@ function entregarkit(id){
                             echo '  <th scope="row">' .$row['Participante']['numero_participante']  . '</th>';
                             echo '  <td scope="row">
                             <a style="color:orange;" href="/inscripciones/editdistance/'.$id.'">
-                            ' .$row['Participante']['carrera_id']  . '
+                            ' . $carreras[ $row['Participante']['carrera_id'] ]  . '
                             </a></td>';
                             echo '  <td style="text-align:left"><a style="color:white;" href="/inscripciones/edit/'.$id.'">'
                              . $nombre . '</a></td>';
@@ -234,7 +232,7 @@ function entregarkit(id){
                             echo '  <td style="text-align:left" id="entregadodiv'.$id.'">' . $icon_entregeado . '</td>';
                             echo '  <td style="text-align:left; ">
                                   <a style="color:orange;" href="/inscripciones/paymentupdate/'.$id.'">Pago</a> |
-                                  <a style="color:orange;" href="/inscripciones/carta/'.$id.'">Carta</a> |
+                                  <a style="color:orange;" href="/inscripciones/carta/'.$id.'" target="_blank">Carta</a> |
                                   <a style="color:orange;" href="/inscripciones/entregado/'.$id.'">Entregado</a>
                             </td>';
                             echo '<tr>';
